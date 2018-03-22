@@ -42,8 +42,13 @@
 >     返回字符串的片段 
 >     start 从0 开始，包含start索引 为负值 取length+start
 >     end 从0 开始，不包含end索引 为负值 取length+start
-    
-    str.substring(start,end)
+    str.replace(/(^\s+)|(\s+$)/g,"")
+>     清除字符串前后空格
+
+    str.replace(/\s/g, '')
+>     清除字符串所有空格
+
+    str.substring(start,end)
 >     返回str指定位置的子字符串
 >     start && end 同上
 >     使用start和end两者中的较小值作为子字符串的起始点。如果start或end为NaN或者为负数，那么将其替换为0。
